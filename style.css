@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.stApp {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.stTitle {
+    text-align: center;
+    color: #00ffcc;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+.stMarkdown {
+    text-align: center;
+    color: #b3e0ff;
+    font-size: 1.1em;
+}
+
+.stSubheader {
+    color: #ff6b6b;
+    border-bottom: 2px solid #ff6b6b;
+    padding-bottom: 5px;
+    animation: slideIn 1s ease-out;
+}
+
+.stTextInput > div > input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    color: #e0e0e0;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.stTextInput > div > input:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px #ff6b6b;
+}
+
+.stButton > button {
+    background: #00ffcc;
+    color: #1e1e2f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background: #ff6b6b;
+    transform: scale(1.05);
+}
+
+.stTextArea > div > textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    color: #e0e0e0;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.stTextArea > div > textarea:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px #ff6b6b;
+}
+
+.stSuccess {
+    color: #00ffcc;
+    animation: bounceIn 1s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
