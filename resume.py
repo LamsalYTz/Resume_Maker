@@ -6,15 +6,15 @@ import os
 from datetime import datetime
 
 # Load model
-model = joblib.load("app/resume.pkl")
+model = joblib.load("resume.pkl")
 
 # Load or create user data file
-USER_DATA = "app/users.csv"
+USER_DATA = "users.csv"
 if not os.path.exists(USER_DATA):
     pd.DataFrame(columns=["email", "timestamp"]).to_csv(USER_DATA, index=False)
 
 # Apply custom CSS
-with open("app/style.css") as f:
+with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # App title
